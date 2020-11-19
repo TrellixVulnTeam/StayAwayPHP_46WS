@@ -14,15 +14,16 @@ body {
 }
 
 html {
-  /*   background: #151515;
-  color: #fff; */
+  background: #151515;
+  color: #fff;
+  // overflow: hidden;
 }
-/* 
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
 
 .slides {
   display: grid;
@@ -80,6 +81,7 @@ body {
   background-repeat: no-repeat;
   transition: transform 0.5s ease-in-out;
   opacity: 0.7;
+
   display: grid;
   align-content: center;
 
@@ -105,7 +107,7 @@ body {
   }
 
   .slideSubtitle::before {
-    content: "— ";
+    content: '— ';
   }
 
   .slideDescription {
@@ -129,6 +131,12 @@ body {
   pointer-events: none;
 
   transform: translateX(calc(10% * var(--dir)));
+}
+
+.link-carousel {
+  text-decoration: none;
+  list-style: none;
+  color: white;
 }
 
 .slide[data-active] {

@@ -2,7 +2,7 @@ export const auberges = [
   {
     id: 1,
     image:
-      'https://i.pinimg.com/564x/ad/52/e3/ad52e3a1ddfb298356546139159eced0.jpg',
+      'https://www.broche-passion.fr/site_fichiers/cochon-de-lait-a-la-broche-lyon-2.jpg',
     name: 'Pig Counter',
     location: '102 rue du pigeons',
     duration: '2 weeks',
@@ -42,20 +42,11 @@ export const auberges = [
   {
     id: 5,
     image:
-      'https://i.pinimg.com/564x/ad/52/e3/ad52e3a1ddfb298356546139159eced0.jpg',
+      'https://res.cloudinary.com/tf-lab/image/upload/w_600,h_337,c_fill,g_auto:subject,q_auto,f_auto/restaurant/8b5d8cd2-a383-402b-a83a-889ac794fabb/53e7554b-0b43-4915-a5cf-86b117208460.jpg',
     name: 'thirsty camel',
     location: '',
     duration: '3 months',
     description: '',
     delivryPrice: '100 denarius',
-  },
-  {
-    id: '',
-    image: '',
-    name: '',
-    location: '',
-    duration: '',
-    description: '',
-    delivryPrice: '',
   },
 ];

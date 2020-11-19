@@ -1,30 +1,30 @@
-import React from "react";
-import "../style/CarouselFood.scss";
+import React from 'react';
+import '../style/CarouselFood.scss';
 
 const slides = [
   {
-    title: "Weapons",
-    description: "Adventure is never far away",
+    title: 'Weapons',
+    description: 'Adventure is never far away',
     image:
-      "https://images.unsplash.com/photo-1600081729801-fd151cba450f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      'https://images.unsplash.com/photo-1600081729801-fd151cba450f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
   },
   {
-    title: "Shields",
-    description: "Let your dreams come true",
+    title: 'Shields',
+    description: 'Let your dreams come true',
     image:
-      "https://images.unsplash.com/photo-1536258988771-e87178795771?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+      'https://images.unsplash.com/photo-1536258988771-e87178795771?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
   },
   {
-    title: "Armors",
-    description: "A piece of heaven",
+    title: 'Armors',
+    description: 'A piece of heaven',
     image:
-      "https://images.unsplash.com/photo-1573932925621-4a07d654bf77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=333&q=80",
+      'https://images.unsplash.com/photo-1573932925621-4a07d654bf77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=333&q=80',
   },
   {
-    title: "Horse accessories",
-    description: "A piece of heaven",
+    title: 'Horse accessories',
+    description: 'A piece of heaven',
     image:
-      "https://images.unsplash.com/photo-1497369573176-0ceb5353817d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80",
+      'https://images.unsplash.com/photo-1497369573176-0ceb5353817d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80',
   },
 ];
 
@@ -56,14 +56,14 @@ function useTilt(active) {
       const px = (state.mouseX - state.rect.left) / state.rect.width;
       const py = (state.mouseY - state.rect.top) / state.rect.height;
 
-      el.style.setProperty("--px", px);
-      el.style.setProperty("--py", py);
+      el.style.setProperty('--px', px);
+      el.style.setProperty('--py', py);
     };
 
-    el.addEventListener("mousemove", handleMouseMove);
+    el.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      el.removeEventListener("mousemove", handleMouseMove);
+      el.removeEventListener('mousemove', handleMouseMove);
     };
   }, [active]);
 
@@ -75,13 +75,13 @@ const initialState = {
 };
 
 const slidesReducer = (state, event) => {
-  if (event.type === "NEXT") {
+  if (event.type === 'NEXT') {
     return {
       ...state,
       slideIndex: (state.slideIndex + 1) % slides.length,
     };
   }
-  if (event.type === "PREV") {
+  if (event.type === 'PREV') {
     return {
       ...state,
       slideIndex:
@@ -97,29 +97,29 @@ function Slide({ slide, offset }) {
   return (
     <div
       ref={ref}
-      className="slide"
+      className='slide'
       data-active={active}
       style={{
-        "--offset": offset,
-        "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1,
+        '--offset': offset,
+        '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1,
       }}
     >
       <div
-        className="slideBackground"
+        className='slideBackground'
         style={{
           backgroundImage: `url('${slide.image}')`,
         }}
       />
       <div
-        className="slideContent"
+        className='slideContent'
         style={{
           backgroundImage: `url('${slide.image}')`,
         }}
       >
-        <div className="slideContentInner">
-          <h2 className="slideTitle">{slide.title}</h2>
-          <h3 className="slideSubtitle">{slide.subtitle}</h3>
-          <p className="slideDescription">{slide.description}</p>
+        <div className='slideContentInner'>
+          <h2 className='slideTitle'>{slide.title}</h2>
+          <h3 className='slideSubtitle'>{slide.subtitle}</h3>
+          <p className='slideDescription'>{slide.description}</p>
         </div>
       </div>
     </div>
@@ -130,14 +130,14 @@ const CarouselWeapon = () => {
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
   return (
-    <div className="slides">
-      <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
+    <div className='slides'>
+      <button onClick={() => dispatch({ type: 'PREV' })}>‹</button>
 
       {[...slides, ...slides, ...slides].map((slide, i) => {
         let offset = slides.length + (state.slideIndex - i);
         return <Slide slide={slide} offset={offset} key={i} />;
       })}
-      <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+      <button onClick={() => dispatch({ type: 'NEXT' })}>›</button>
     </div>
   );
 };
