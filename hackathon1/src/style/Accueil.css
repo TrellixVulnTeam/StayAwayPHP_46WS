@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-home-page {
+  background: #ddc1b7;
+  height: 100%;
+  width: 100%;
+}
+
+.container-btn-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-bottom: 100%;
+}
+
+.btn1,
+.btn2 {
+  border: 0;
+  color: #ddc1b7;
+  font-weight: bolder;
+  padding: 20px 0;
+  background: #724114;
+  width: 80%;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  border-radius: 20px;
+  margin-left: 40px;
+}
+
+.btn1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.logo {
+  width: 100%;
+}
+
+.gif {
+  width: 58%;
+  height: 20%;
+  animation-duration: 5s;
+  animation-name: taxiDriving;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes taxiDriving {
+  from {
+    transform: translate(-200%, 0px);
+
+    margin-right: 0%;
+  }
+
+  to {
+    margin-left: 95%;
+  }
+}
+
+@media screen and (min-width: 1024px){
+body{
+    width: 100%;
+    background: #ddc1b7;
+}
+.logo{
+    width: 100%;
+}   
+
+.container-home-page{
+    width: 100%;
+}
+}
