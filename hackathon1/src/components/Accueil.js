@@ -1,12 +1,11 @@
-import React from "react";
-
-import Auberges from "./Auberges";
+import React from 'react';
+import Meals from './Meals.js';
 
 const Accueil = () => {
   return (
     <div>
       Home
-      <Auberges />
+      <Meals />
     </div>
   );
 };

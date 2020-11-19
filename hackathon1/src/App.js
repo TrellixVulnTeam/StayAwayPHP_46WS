@@ -9,6 +9,8 @@ import Rechercher from './components/Rechercher';
 import Commandes from './components/Commandes';
 import Compte from './components/Compte';
 import Accueil from './components/Accueil';
+import CarouselFood from './components/CarouselFood';
+import CarouselWeapon from './components/CarouselWeapon';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Accueil}/>
+          <Route exact path="/food" component={CarouselFood}/>
+          <Route exact path="/weapon" component={CarouselWeapon} />
           <Route exact path= "/rechercher" component={Rechercher}/>
           <Route exact path= "/commandes" component={Commandes}/>
           <Route exact path= "/compte" component={Compte}/>
