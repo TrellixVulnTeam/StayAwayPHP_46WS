@@ -6,14 +6,14 @@ const PAGE_CART = 'cart'
 
 const Weapons = () => {
 const [products] = useState([
-    {name:'epic sword', image:'https://www.darksword-armory.com/wp-content/uploads/2018/07/the-vindaaris-sword-fantasy-medieval-weapon-1328-darksword-armory-3-600x400.jpg', cost:'4.99€', etat:'new'},
-    {name:' old Axe', image:'https://images-na.ssl-images-amazon.com/images/I/711JcVqirDL._SL1500_.jpg', cost:'8.99€', etat:'new'},
-    {name:'prout', image:'https://images-na.ssl-images-amazon.com/images/I/711JcVqirDL._SL1500_.jpg', cost:'8.99€', etat:'new'},
-    {name:'spartan sword', image:'https://images-na.ssl-images-amazon.com/images/I/711JcVqirDL._SL1500_.jpg', cost:'8.99€', etat:'new'},
-    {name:'bow', image:'https://images-na.ssl-images-amazon.com/images/I/711JcVqirDL._SL1500_.jpg', cost:'8.99€', etat:'new'},
-    {name:'germanic spear', image:'https://images-na.ssl-images-amazon.com/images/I/711JcVqirDL._SL1500_.jpg', cost:'8.99€', etat:'new'},
-    {name:'bow', image:'https://images-na.ssl-images-amazon.com/images/I/711JcVqirDL._SL1500_.jpg', cost:'8.99€', etat:'new'},
-    {name:'germanic spear', image:'https://images-na.ssl-images-amazon.com/images/I/711JcVqirDL._SL1500_.jpg', cost:'8.99€', etat:'new'},
+    {name:'epic sword', image:'../images/weapon1.png', cost:'4.99€', etat:'new'},
+    {name:' old sword', image:'../images/weapon2.png', cost:'8.99€', etat:'new'},
+    {name:'Axe', image:'../images/weapon3.png', cost:'8.99€', etat:'new'},
+    {name:'war hammer', image:'../images/weapon4.png', cost:'8.99€', etat:'new'},
+    {name:'Classic bow', image:'../images/weapon5.png', cost:'8.99€', etat:'new'},
+    {name:'Dagger', image:'../images/weapon6.png', cost:'8.99€', etat:'new'},
+    {name:'bow', image:'../images/weapon7.png', etat:'new'},
+    {name:'germanic spear', image:'../images/weapon8.png', cost:'8.99€', etat:'new'},
 ])
 const [cart,setCart] = useState([])
 const [page,setPage] = useState(PAGE_PRODUCTS)
@@ -64,7 +64,7 @@ const renderCart = () => (
                 <div className="container-header">
                         <h1>Dev Tools</h1>
                     <div className="panier">
-                        <img className="panier-img" src="../images/panier.png" alt="panier"
+                        <img style={{width:"50px", height:"50px"}} className="panier-img" src="../images/panier2.png" alt="panier"
                         onClick={() => navigateTo(PAGE_CART)} />
                         ({cart.length})
                     </div>

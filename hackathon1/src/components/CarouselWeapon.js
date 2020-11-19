@@ -111,7 +111,7 @@ const slides = [
           "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
         }}
       >
-        <Link to={`${slide.path}`}>
+        <Link className="link-carousel" to={`${slide.path}`}>
         <div
           className="slideContent"
           style={{
