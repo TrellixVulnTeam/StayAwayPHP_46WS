@@ -1,0 +1,30 @@
+.products{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    flex-wrap: wrap;
+}
+
+.product{
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid white;
+    background-color: white(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.btn-card{
+    width:60%;
+    height:40px ;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-color: transparent;
+
+}
+
+.btn-card:hover{
+    cursor: pointer;
+    background-color: black;
+}

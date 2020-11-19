@@ -1,32 +1,39 @@
-import React  from 'react';
+import React from 'react';
+import {Link} from 'react-router-dom'
 import '../style/CarouselFood.scss';
 
 const slides = [
     {
+        path:"weapons",
       title: "Weapons",
-      description: "Adventure is never far away",
+      description: "Find a new weapon here",
       image:
         "https://images.unsplash.com/photo-1600081729801-fd151cba450f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
     },
     {
+        path:"shields",
       title: "Shields",
       description: "Let your dreams come true",
       image:
         "https://images.unsplash.com/photo-1536258988771-e87178795771?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
     },
     {
+        path:"armors",
       title: "Armors",
       description: "A piece of heaven",
       image:
       "https://images.unsplash.com/photo-1573932925621-4a07d654bf77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=333&q=80"
     },
     {
+        path:"horse",
       title: "Horse accessories",
       description: "A piece of heaven",
       image:
         "https://images.unsplash.com/photo-1497369573176-0ceb5353817d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
     },
   ];
+
+  
   
   function useTilt(active) {
     const ref = React.useRef(null);
@@ -104,24 +111,24 @@ const slides = [
           "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
         }}
       >
-        <div
-          className="slideBackground"
-          style={{
-            backgroundImage: `url('${slide.image}')`
-          }}
-        />
+        <Link to={`${slide.path}`}>
         <div
           className="slideContent"
           style={{
             backgroundImage: `url('${slide.image}')`
           }}
         >
+        
           <div className="slideContentInner">
+
             <h2 className="slideTitle">{slide.title}</h2>
             <h3 className="slideSubtitle">{slide.subtitle}</h3>
             <p className="slideDescription">{slide.description}</p>
           </div>
+
         </div>
+
+        </Link>
       </div>
     );
   }
