@@ -1,16 +1,16 @@
-import React from 'react';
-
-import Taiwan from '@svg-maps/taiwan';
-import { SVGMap } from 'react-svg-map';
-import 'react-svg-map/lib/index.css';
+import React from "react";
+import Israel from "@svg-maps/israel";
+import { SVGMap } from "react-svg-map";
+import "react-svg-map/lib/index.css";
 
 class Geolocalisation extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    return <SVGMap map={Taiwan} />;
+    return (
+      <div>
+        <SVGMap map={Israel} />
+        <p>Coucou géoloc</p>
+      </div>
+    );
   }
 }
 
