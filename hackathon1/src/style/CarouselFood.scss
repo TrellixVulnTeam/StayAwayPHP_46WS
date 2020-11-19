@@ -7,7 +7,6 @@
 
 html,
 body {
-  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -17,7 +16,7 @@ body {
 html {
   background: #151515;
   color: #fff;
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 
 body {
@@ -135,6 +134,12 @@ body {
   transform: translateX(calc(10% * var(--dir)));
 }
 
+.link-carousel{
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
 .slide[data-active] {
   z-index: 2;
   pointer-events: auto;
@@ -162,3 +167,5 @@ body {
     }
   }
 }
+
+

@@ -11,6 +11,10 @@ import Compte from './components/Compte';
 import Accueil from './components/Accueil';
 import CarouselFood from './components/CarouselFood';
 import CarouselWeapon from './components/CarouselWeapon';
+import Weapons from './components/Weapons';
+import Armor from './components/Armor';
+import Shields from './components/Shields';
+import HorseAccessories from './components/HorseAccessories';
 
 function App() {
   return (
@@ -20,10 +24,14 @@ function App() {
         <Switch>
           <Route exact path="/" component={Accueil}/>
           <Route exact path="/food" component={CarouselFood}/>
-          <Route exact path="/weapon" component={CarouselWeapon} />
+          <Route exact path="/carouselweapon" component={CarouselWeapon}/>
           <Route exact path= "/rechercher" component={Rechercher}/>
           <Route exact path= "/commandes" component={Commandes}/>
-          <Route exact path= "/compte" component={Compte}/>
+          <Route exact path= "/compte" component={Compte} />
+          <Route exact path= "/weapons" component={Weapons} />
+          <Route exact path="/armors" component={Armor} />
+          <Route exact path="/shields" component={Shields} />
+          <Route exact path="/horse" component={HorseAccessories} />
         </Switch>
       </Router>
     </div>
