@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../style/Cards.css'
+import {Link} from 'react-router-dom';
 
 const PAGE_PRODUCTS = 'products'
 const PAGE_CART = 'cart'
@@ -52,6 +53,9 @@ const renderCart = () => (
             <h4>{product.cost}</h4>
             <h5>{product.etat}</h5>
             <button className="btn-card"  onClick={() => removeFromCart(product)}>Remove</button>
+            <Link to="/order">
+                <button className="btn btn-default">Achat</button>
+            </Link>
         </div>
         
     ))}

@@ -15,6 +15,7 @@ import Weapons from './components/Weapons';
 import Armor from './components/Armor';
 import Shields from './components/Shields';
 import HorseAccessories from './components/HorseAccessories';
+import OrderConfirmation from './components/OrderConfirmation';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route exact path="/armors" component={Armor} />
           <Route exact path="/shields" component={Shields} />
           <Route exact path="/horse" component={HorseAccessories} />
+          <Route exact path="/order" component={OrderConfirmation} />
         </Switch>
       </Router>
     </div>
