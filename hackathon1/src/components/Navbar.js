@@ -11,7 +11,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/Auberges">Foods</Link>
+            <Link to="/food2">Foods</Link>
           </li>
           <li>
             <Link to="/carouselweapon">Weapons</Link>
@@ -20,6 +20,10 @@ const Navbar = () => {
           <li>
             <Link to="/order">Orders</Link>
           </li>
+
+          {/*           <li>
+            <Link to="/food2">food2</Link>
+          </li> */}
         </ul>
       </nav>
     </div>

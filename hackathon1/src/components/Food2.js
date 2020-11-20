@@ -1,42 +1,41 @@
 import React from "react";
-import "../style/CarouselFood.scss";
 import { Link } from "react-router-dom";
 
 const slides = [
   {
-    title: "Auberges",
-    subtitle: "Find the best place to eat",
-    description: "",
+    path: "/listOfMeals",
+    title: "Hostel",
+    description: "Pig Counter",
     image:
       "https://www.lesrestos.com/img/media/special/festoyez-au-banquet-des-troubadours-1.jpg",
   },
   {
-    title: "Chamonix",
-    subtitle: "France",
-    description: "Let your dreams come true",
+    path: "/listOfMeals",
+    title: "Hostel",
+    description: "To the drunken knight",
     image:
-      "https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      "https://fr.web.img6.acsta.net/r_1920_1080/newsv7/16/12/06/12/46/2807590.jpg",
   },
   {
-    title: "Mimisa Rocks",
-    subtitle: "Australia",
-    description: "A piece of heaven",
+    path: "/listOfMeals",
+    title: "Hostel",
+    description: "The Crazy Crusade",
     image:
-      "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      "https://i.pinimg.com/564x/ad/52/e3/ad52e3a1ddfb298356546139159eced0.jpg",
   },
   {
-    title: "Four",
-    subtitle: "Australia",
-    description: "A piece of heaven",
+    path: "/listOfMeals",
+    title: "Hostel",
+    description: "The lost mercenary",
     image:
-      "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      "https://www.tripsavvy.com/thmb/8kd8i8KYZ1G26UbdVMXebWRgRyk=/1499x999/filters:fill(auto,1)/MedievalBanquet-56a3e2af3df78cf7727fae5b.jpg",
   },
   {
-    title: "Five",
-    subtitle: "Australia",
-    description: "A piece of heaven",
+    path: "/listOfMeals",
+    title: "Hostel",
+    description: "Thirsty camel",
     image:
-      "https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      "https://www.greatdays.co.uk/wp-content/uploads/The-Medieval-Banquet-Ivory-House-St-Katharine-Docks-London-Stag-3-NCN.jpg",
   },
 ];
 
@@ -116,44 +115,42 @@ function Slide({ slide, offset }) {
         "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1,
       }}
     >
-      <div
-        className="slideBackground"
-        style={{
-          backgroundImage: `url('${slide.image}')`,
-        }}
-      />
-      <div
-        className="slideContent"
-        style={{
-          backgroundImage: `url('${slide.image}')`,
-        }}
-      >
-        <Link to="/auberges">
+      <Link className="link-carousel" to={`${slide.path}`}>
+        <div
+          className="slideContent"
+          style={{
+            backgroundImage: `url('${slide.image}')`,
+          }}
+        >
           <div className="slideContentInner">
             <h2 className="slideTitle">{slide.title}</h2>
             <h3 className="slideSubtitle">{slide.subtitle}</h3>
             <p className="slideDescription">{slide.description}</p>
           </div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </div>
   );
 }
 
-const CarouselFood = () => {
+const CarouselWeapon = () => {
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
   return (
     <div className="slides">
-      <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
+      <button className="btn-slides" onClick={() => dispatch({ type: "PREV" })}>
+        ‹
+      </button>
 
       {[...slides, ...slides, ...slides].map((slide, i) => {
         let offset = slides.length + (state.slideIndex - i);
         return <Slide slide={slide} offset={offset} key={i} />;
       })}
-      <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+      <button className="btn-slides" onClick={() => dispatch({ type: "NEXT" })}>
+        ›
+      </button>
     </div>
   );
 };
 
-export default CarouselFood;
+export default CarouselWeapon;
