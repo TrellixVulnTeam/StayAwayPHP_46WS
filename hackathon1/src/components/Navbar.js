@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import '../style/Navbar.css';
 
 const Navbar = () => {
     return(
         <div>
-            <nav>
-                <ul>
+            <nav >
+                <ul className="menu">
                     <li>
                         <Link to="/">Home</Link>
                     </li>
@@ -15,15 +16,11 @@ const Navbar = () => {
                     <li>
                         <Link to="/carouselweapon">Weapon</Link>
                     </li>
-                    <li>
-                        <Link to="/rechercher">Search</Link>
-                    </li>
+                    
                     <li>
                         <Link to="/commandes">Orders</Link>
                     </li>
-                    <li>
-                        <Link to="/compte">Account</Link>
-                    </li>
+                    
                     
                 </ul>
             </nav>

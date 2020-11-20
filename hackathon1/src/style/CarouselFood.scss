@@ -14,15 +14,16 @@ body {
 }
 
 html {
-  background: #151515;
+  overflow-x: hidden; 
   color: #fff;
-/*   overflow: hidden; */
+  
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden; 
 } 
 
 .slides {
@@ -97,6 +98,7 @@ body {
   transition: opacity 0.3s linear;
   text-shadow: 0 0.1rem 1rem #000;
   opacity: 0;
+  
 
   .slideSubtitle,
   .slideTitle {
@@ -167,4 +169,12 @@ body {
     }
   }
 }
+
+
+@media screen and (max-width:736px){
+   .slideContent{
+    height: 300px;
+   }
+}
+
 

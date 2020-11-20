@@ -27,7 +27,13 @@
     border-color: transparent;
 
 }
-
+.btn-confirmation{
+    width:178px;
+    height:30px ;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-color: transparent;
+}
 .btn-card:hover{
     cursor: pointer;
     background-color: black;
