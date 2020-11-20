@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+
+.container{
+    border: 3px solid white;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+#imageAuberge{
+    width: 70%;
+    height: 50vh;
+}
+
+.link-auberge{
+    text-decoration: none;
+}
+
+.name{
+    color: #724114 ;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 30px;
+}
+
+.delivery{
+    color: white ;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.duration{
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+}

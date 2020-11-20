@@ -1,0 +1,26 @@
+.cheval {
+  position: absolute;
+  z-index: 1;
+  width: 58%;
+  height: 20%;
+  animation-duration: 5s;
+  animation-name: taxiDriving;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes taxiDriving {
+  from {
+    transform: translate(-200%, 0px);
+
+    margin-right: 0%;
+  }
+
+  to {
+    margin-left: 95%;
+  }
+}
+
+.google-map-code {
+  z-index: 0;
+}
