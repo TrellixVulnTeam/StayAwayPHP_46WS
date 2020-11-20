@@ -24,3 +24,7 @@
 .google-map-code {
   z-index: 0;
 }
+
+.panier-img:hover {
+  cursor: pointer;
+}

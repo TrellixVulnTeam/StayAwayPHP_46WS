@@ -1,42 +1,42 @@
-import React from 'react';
-import '../style/CarouselFood.scss';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "../style/CarouselFood.scss";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
-    title: 'Auberges',
-    subtitle: 'Find the best place to eat',
-    description: '',
+    title: "Auberges",
+    subtitle: "Find the best place to eat",
+    description: "",
     image:
-      'https://www.lesrestos.com/img/media/special/festoyez-au-banquet-des-troubadours-1.jpg',
+      "https://www.lesrestos.com/img/media/special/festoyez-au-banquet-des-troubadours-1.jpg",
   },
   {
-    title: 'Chamonix',
-    subtitle: 'France',
-    description: 'Let your dreams come true',
+    title: "Chamonix",
+    subtitle: "France",
+    description: "Let your dreams come true",
     image:
-      'https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
+      "https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
   },
   {
-    title: 'Mimisa Rocks',
-    subtitle: 'Australia',
-    description: 'A piece of heaven',
+    title: "Mimisa Rocks",
+    subtitle: "Australia",
+    description: "A piece of heaven",
     image:
-      'https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
+      "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
   },
   {
-    title: 'Four',
-    subtitle: 'Australia',
-    description: 'A piece of heaven',
+    title: "Four",
+    subtitle: "Australia",
+    description: "A piece of heaven",
     image:
-      'https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
+      "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
   },
   {
-    title: 'Five',
-    subtitle: 'Australia',
-    description: 'A piece of heaven',
+    title: "Five",
+    subtitle: "Australia",
+    description: "A piece of heaven",
     image:
-      'https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
+      "https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
   },
 ];
 
@@ -68,14 +68,14 @@ function useTilt(active) {
       const px = (state.mouseX - state.rect.left) / state.rect.width;
       const py = (state.mouseY - state.rect.top) / state.rect.height;
 
-      el.style.setProperty('--px', px);
-      el.style.setProperty('--py', py);
+      el.style.setProperty("--px", px);
+      el.style.setProperty("--py", py);
     };
 
-    el.addEventListener('mousemove', handleMouseMove);
+    el.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      el.removeEventListener('mousemove', handleMouseMove);
+      el.removeEventListener("mousemove", handleMouseMove);
     };
   }, [active]);
 
@@ -87,13 +87,13 @@ const initialState = {
 };
 
 const slidesReducer = (state, event) => {
-  if (event.type === 'NEXT') {
+  if (event.type === "NEXT") {
     return {
       ...state,
       slideIndex: (state.slideIndex + 1) % slides.length,
     };
   }
-  if (event.type === 'PREV') {
+  if (event.type === "PREV") {
     return {
       ...state,
       slideIndex:
@@ -109,30 +109,30 @@ function Slide({ slide, offset }) {
   return (
     <div
       ref={ref}
-      className='slide'
+      className="slide"
       data-active={active}
       style={{
-        '--offset': offset,
-        '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1,
+        "--offset": offset,
+        "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1,
       }}
     >
       <div
-        className='slideBackground'
+        className="slideBackground"
         style={{
           backgroundImage: `url('${slide.image}')`,
         }}
       />
       <div
-        className='slideContent'
+        className="slideContent"
         style={{
           backgroundImage: `url('${slide.image}')`,
         }}
       >
-        <Link to='/auberges'>
-          <div className='slideContentInner'>
-            <h2 className='slideTitle'>{slide.title}</h2>
-            <h3 className='slideSubtitle'>{slide.subtitle}</h3>
-            <p className='slideDescription'>{slide.description}</p>
+        <Link to="/auberges">
+          <div className="slideContentInner">
+            <h2 className="slideTitle">{slide.title}</h2>
+            <h3 className="slideSubtitle">{slide.subtitle}</h3>
+            <p className="slideDescription">{slide.description}</p>
           </div>
         </Link>
       </div>
@@ -144,14 +144,14 @@ const CarouselFood = () => {
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
   return (
-    <div className='slides'>
-      <button onClick={() => dispatch({ type: 'PREV' })}>‹</button>
+    <div className="slides">
+      <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
 
       {[...slides, ...slides, ...slides].map((slide, i) => {
         let offset = slides.length + (state.slideIndex - i);
         return <Slide slide={slide} offset={offset} key={i} />;
       })}
-      <button onClick={() => dispatch({ type: 'NEXT' })}>›</button>
+      <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
     </div>
   );
 };
