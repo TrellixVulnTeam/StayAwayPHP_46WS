@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../style/Accueil.scss';
-import logo from '../style/logo.png';
-import gif from '../style/chevalier.gif';
+import '../style/Accueil.css';
+/* import logo from '../images/logo.png'; 
+import gif from '../images/chevalier.gif';  */
 
 const Accueil = () => {
   return (
     <div className='container-home-page'>
-      <img className='logo' src={logo} alt='logo' />
+      <img className='logo' src='../images/logo.png' alt='logo' />
+      <img className='gif' src='../images/chevalier.gif' alt='logo' />
+
       <div className='container-btn-home'>
         <Link to='/weapon'>
           <button type='button' className='btn1'>
@@ -15,9 +17,10 @@ const Accueil = () => {
           </button>
         </Link>
         <Link to='/food'>
-          <button type='button' className='btn2'></button>
+          <button type='button' className='btn2'>
+            EXPRESS MEALS
+          </button>
         </Link>
-        <img className='gif' src={gif} alt='logo' />
       </div>
     </div>
   );

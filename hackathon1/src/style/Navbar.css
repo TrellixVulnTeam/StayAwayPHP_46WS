@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+
+.ulNavbar {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ulNavbar li {
+  list-style: none;
+  font-size: 15px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.navbar {
+  padding-bottom: 10px;
+  background-color: #724114;
+}
+
+a {
+  color: #ddc1b7;
+}
+
+@media screen and (min-width: 1024px) {
+  .Navbar {
+    width: 100%;
+  }
+}

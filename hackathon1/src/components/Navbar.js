@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../style/Navbar.scss';
+import '../style/Navbar.css';
 
 const Navbar = () => {
   return (
     <div>
       <nav class='navbar'>
-        <ul>
+        <ul className='ulNavbar'>
           <li>
             <Link to='/'>Home</Link>
           </li>
@@ -17,13 +17,7 @@ const Navbar = () => {
             <Link to='/weapon'>Weapon</Link>
           </li>
           <li>
-            <Link to='/rechercher'>Search</Link>
-          </li>
-          <li>
             <Link to='/commandes'>Orders</Link>
-          </li>
-          <li>
-            <Link to='/compte'>Account</Link>
           </li>
         </ul>
       </nav>
