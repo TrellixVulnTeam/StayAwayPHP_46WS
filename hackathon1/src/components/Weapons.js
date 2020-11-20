@@ -7,14 +7,14 @@ const PAGE_CART = 'cart'
 
 const Weapons = () => {
 const [products] = useState([
-    {name:'epic sword', image:'../images/weapon1.png', cost:'4.99€', etat:'new'},
-    {name:' old sword', image:'../images/weapon2.png', cost:'8.99€', etat:'new'},
-    {name:'Axe', image:'../images/weapon3.png', cost:'8.99€', etat:'new'},
-    {name:'war hammer', image:'../images/weapon4.png', cost:'8.99€', etat:'new'},
-    {name:'Classic bow', image:'../images/weapon5.png', cost:'8.99€', etat:'new'},
-    {name:'Dagger', image:'../images/weapon6.png', cost:'8.99€', etat:'new'},
-    {name:'bow', image:'../images/weapon7.png', etat:'new'},
-    {name:'germanic spear', image:'../images/weapon8.png', cost:'8.99€', etat:'new'},
+    {name:'epic sword', image:'../images/weapon1.png', cost:'684', etat:'./images/denier.png'},
+    {name:' old sword', image:'../images/weapon2.png', cost:'899', etat:'./images/denier.png'},
+    {name:'Axe', image:'../images/weapon3.png', cost:'899', etat:'./images/denier.png'},
+    {name:'war hammer', image:'../images/weapon4.png', cost:'714', etat:'./images/denier.png'},
+    {name:'Classic bow', image:'../images/weapon5.png', cost:'689', etat:'./images/denier.png'},
+    {name:'Dagger', image:'../images/weapon6.png', cost:'915', etat:'./images/denier.png'},
+    {name:'bow', image:'../images/weapon7.png', cost:'842', etat:'./images/denier.png'},
+    {name:'germanic spear', image:'../images/weapon8.png', cost:'1024', etat:'./images/denier.png'},
 ])
 const [cart,setCart] = useState([])
 const [page,setPage] = useState(PAGE_PRODUCTS)
@@ -37,7 +37,7 @@ const renderProducts = () => ( <>
             <h3>{product.name}</h3>
             <img style={{width:"100px", height:"100px"}} src={product.image} alt={product.name} />
             <h4>{product.cost}</h4>
-            <h5>{product.etat}</h5>
+            <img style={{width:"30px", height:"30px"}} src={product.etat} alt={product.name} />
             <button className="btn-card"  onClick={() => addToCart(product)}>Ajoutez au panier</button>
         </div>
     ))}
@@ -46,18 +46,17 @@ const renderProducts = () => ( <>
 
 const renderCart = () => (
     <>
+            <Link to="/order">
+                <button className="btn btn-default">Achat</button>
+            </Link>
     {cart.map((product, index) => (
         <div className="product" key={index}>
             <h3>{product.name}</h3>
             <img  style={{width:"100px", height:"100px"}} src={product.image} alt={product.name} />
             <h4>{product.cost}</h4>
-            <h5>{product.etat}</h5>
+            <img style={{width:"30px", height:"30px"}} src={product.etat} alt={product.name} />
             <button className="btn-card"  onClick={() => removeFromCart(product)}>Remove</button>
-            <Link to="/order">
-                <button className="btn btn-default">Achat</button>
-            </Link>
         </div>
-        
     ))}
     </>
 )
@@ -66,7 +65,6 @@ const renderCart = () => (
         <div>
             <header>
                 <div className="container-header">
-                        <h1>Dev Tools</h1>
                     <div className="panier">
                         <img style={{width:"50px", height:"50px"}} className="panier-img" src="../images/panier2.png" alt="panier"
                         onClick={() => navigateTo(PAGE_CART)} />

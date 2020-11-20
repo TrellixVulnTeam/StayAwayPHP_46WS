@@ -11,10 +11,10 @@ const Navbar = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/food">Food</Link>
+                        <Link to="/Auberges">Foods</Link>
                     </li>
                     <li>
-                        <Link to="/carouselweapon">Weapon</Link>
+                        <Link to="/carouselweapon">Weapons</Link>
                     </li>
                     
                     <li>

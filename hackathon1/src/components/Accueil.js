@@ -17,7 +17,7 @@ const Accueil = () => {
             EXPRESS WEAPONS
           </button>
         </Link>
-        <Link to='/food'>
+        <Link to='/auberges'>
           <button type='button' className='btn2 btn'>
             EXPRESS MEALS
           </button>

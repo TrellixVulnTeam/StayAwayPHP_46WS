@@ -24,7 +24,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Accueil} />
           <Route exact path='/food' component={CarouselFood} />
-          <Route exact path='/carouselweapon' component={CarouselWeapon} />
+          <Route exact path='/carouselweapon' component={CarouselWeapon} /> 
           <Route exact path='/rechercher' component={Rechercher} />
           <Route exact path='/commandes' component={Commandes} />
           <Route exact path='/compte' component={Compte} />

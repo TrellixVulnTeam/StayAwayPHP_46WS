@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+
 .products{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    
+    justify-content: space-around; 
     flex-wrap: wrap;
 }
 
 .product{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 20px;
     width: 300px;
@@ -17,14 +18,18 @@
     border: 1px solid white;
     background-color: white(0, 0, 0, 0.7);
     border-radius: 10px;
+    box-shadow: 1px -1px 1px 10px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .btn-card{
     width:60%;
     height:40px ;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #724114;
     color: white;
     border-color: transparent;
+    border-radius: 20px;
+    font-family: 'Nunito Sans', sans-serif;
 
 }
 .btn-confirmation{
