@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style/CarouselFood.scss';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const slides = [
   {

@@ -1,13 +1,12 @@
-.menu{
+.menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.menu li{
+.menu li {
   list-style: none;
 }
-.menu li a{
+.menu li a {
   text-decoration: none;
   color: white;
- 
 }
