@@ -1,73 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container-cards{
-    display: flex;
-    flex-direction: column;
-   /*  justify-content: space-between; */
-    align-items: center;
+.container-cards {
+  display: flex;
+  flex-direction: column;
+  /*  justify-content: space-between; */
+  align-items: center;
 }
-
 
 .container-food {
-    width: 90vw;
-     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center; 
- /*    border:1px solid black; */
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin-top: 20px;
-    box-shadow: 1px -1px 1px 10px
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /*    border:1px solid black; */
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 20px;
+  box-shadow: 1px -1px 1px 10px;
 }
 
 .img-food {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
-.paraph-food{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 50%;
-    font-family: 'Nunito Sans', sans-serif;
-
+.paraph-food {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-.para1{
-    text-align: left;
-    font-size: 30px;
-    color:#724114;
+.para1 {
+  text-align: left;
+  font-size: 30px;
+  color: #724114;
 }
 
-.para2{
-    font-size: 20px;
-    text-align: left;
+.para2 {
+  font-size: 20px;
+  text-align: left;
 }
 
-.btn-food{
-    padding: 10px;
-    cursor: pointer;
-    border: 1mm ridge #724114;
-    font-family: 'Nunito Sans', sans-serif;
-    color:#724114;
+.btn-food {
+  padding: 10px;
+  cursor: pointer;
+  border: 1mm ridge #724114;
+  font-family: "Nunito Sans", sans-serif;
+  color: #724114;
 }
 
-.para3{
-    font-size: 20px;
-    font-family: 'Nunito Sans', sans-serif;
-    color: grey;
+.btn-food:hover {
+  transform: scale(0.92);
+}
+.para3 {
+  font-size: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  color: grey;
 }
 
-.denier{
-    width: 30px;
-    height: 30px;
+.denier {
+  width: 30px;
+  height: 30px;
 }
-

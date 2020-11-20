@@ -14,6 +14,7 @@ import OrderConfirmation from "./components/OrderConfirmation";
 import Meals from "./components/Meals";
 import Auberges from "./components/Auberges";
 import ListOfMeals from "./components/ListOfMeals";
+import ListOfMeals2 from "./components/ListOfMeals2";
 import Food2 from "./components/Food2";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route exact path="/meals" component={Meals} />
           <Route exact path="/auberges" component={Auberges} />
           <Route exact path="/listOfMeals" component={ListOfMeals} />
+          <Route exact path="/listOfMeals2" component={Food2} />
           <Route exact path="/food2" component={Food2} />
         </Switch>
       </Router>

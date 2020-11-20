@@ -41,9 +41,22 @@
 .btn-card:hover {
   cursor: pointer;
   background-color: black;
+  transform: scale(0.92);
 }
 
 .renderCartContainer {
   display: flex;
   flex-direction: column;
+}
+
+.btn-default {
+  margin: 25px;
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 0.7em;
+  width: 150px;
+}
+
+.btn-default:hover {
+  transform: scale(0.92);
 }

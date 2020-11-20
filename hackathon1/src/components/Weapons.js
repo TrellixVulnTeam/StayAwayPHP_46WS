@@ -88,7 +88,7 @@ const Weapons = () => {
             alt={product.name}
           />
           <button className="btn-card" onClick={() => addToCart(product)}>
-            Ajoutez au panier
+            Add to basket
           </button>
         </div>
       ))}

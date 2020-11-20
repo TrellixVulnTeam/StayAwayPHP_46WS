@@ -1,61 +1,79 @@
 import React, { useState } from "react";
 import "../style/Cards.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const PAGE_PRODUCTS = "products";
 const PAGE_CART = "cart";
 
-const Shields = () => {
-  const [products] = useState([
-    {
-      name: "Kingdoms Heart",
-      image: "../images/bouclier1.png",
-      cost: "945",
+const ListOfMeals2 = () => {
+  let count = 0;
+  const [meals, setMeals] = useState([]);
+  React.useEffect(() => {
+    getMeals();
+  }, [count]);
+
+  const getMeals = () => {
+    axios
+      .get("https://www.themealdb.com/api/json/v1/1/random.php")
+      // Extract the DATA from the received response
+      .then((response) => response.data.meals)
+      // Use this data to update the state
+      .then((data) => {
+        setMeals(data);
+      });
+  };
+  console.log(meals);
+  /*const [products] = useState([
+     {
+      name: "epic sword",
+      image: "../images/weapon1.png",
+      cost: "684",
       etat: "./images/denier.png",
     },
     {
-      name: "Honors Will",
-      image: "../images/bouclier2.png",
-      cost: "685",
+      name: " old sword",
+      image: "../images/weapon2.png",
+      cost: "899",
       etat: "./images/denier.png",
     },
     {
-      name: "Eulogy",
-      image: "../images/bouclier3.png",
-      cost: "457",
+      name: "Axe",
+      image: "../images/weapon3.png",
+      cost: "899",
       etat: "./images/denier.png",
     },
     {
-      name: "Deserted Shield",
-      image: "../images/bouclier4.png",
-      cost: "854",
+      name: "war hammer",
+      image: "../images/weapon4.png",
+      cost: "714",
       etat: "./images/denier.png",
     },
     {
-      name: "Prides Wall",
-      image: "../images/bouclier5.png",
-      cost: "456",
+      name: "Classic bow",
+      image: "../images/weapon5.png",
+      cost: "689",
       etat: "./images/denier.png",
     },
     {
-      name: "Recruits Maple Defender",
-      image: "../images/bouclier6.png",
-      cost: "954",
+      name: "Dagger",
+      image: "../images/weapon6.png",
+      cost: "915",
       etat: "./images/denier.png",
     },
     {
-      name: "Defenders Obsidian Buckler",
-      image: "../images/bouclier7.png",
-      cost: "1520",
+      name: "bow",
+      image: "../images/weapon7.png",
+      cost: "842",
       etat: "./images/denier.png",
     },
     {
-      name: "Reign Breaker Memory of the Night Sky",
-      image: "../images/bouclier8.png",
-      cost: "750",
+      name: "germanic spear",
+      image: "../images/weapon8.png",
+      cost: "1024",
       etat: "./images/denier.png",
-    },
-  ]);
+    }, 
+  ]);*/
   const [cart, setCart] = useState([]);
   const [page, setPage] = useState(PAGE_PRODUCTS);
 
@@ -73,22 +91,18 @@ const Shields = () => {
 
   const renderProducts = () => (
     <>
-      {products.map((product, index) => (
+      {meals.map((product, index) => (
         <div className="product" key={index}>
-          <h3>{product.name}</h3>
+          <h3>{product.strMeal}</h3>
           <img
             style={{ width: "100px", height: "100px" }}
-            src={product.image}
-            alt={product.name}
+            src={product.strMealThumb}
+            alt={product.strMeal}
           />
           <h4>{product.cost}</h4>
-          <img
-            style={{ width: "30px", height: "30px" }}
-            src={product.etat}
-            alt={product.name}
-          />
+
           <button className="btn-card" onClick={() => addToCart(product)}>
-            Add to basket
+            Ajoutez au panier
           </button>
         </div>
       ))}
@@ -98,24 +112,17 @@ const Shields = () => {
   const renderCart = () => (
     <div className="renderCartContainer">
       <>
-        {" "}
         <Link to="/order">
           <button className="btn btn-default">Achat</button>
         </Link>
         <div className="products">
           {cart.map((product, index) => (
             <div className="product" key={index}>
-              <h3>{product.name}</h3>
+              <h3>{product.strMeal}</h3>
               <img
                 style={{ width: "100px", height: "100px" }}
-                src={product.image}
-                alt={product.name}
-              />
-              <h4>{product.cost}</h4>
-              <img
-                style={{ width: "30px", height: "30px" }}
-                src={product.etat}
-                alt={product.name}
+                src={product.strMealThumb}
+                alt={product.strMeal}
               />
               <button
                 className="btn-card"
@@ -146,7 +153,6 @@ const Shields = () => {
           </div>
         </div>
       </header>
-
       <div className="products">
         {page === PAGE_PRODUCTS && renderProducts()}
         {page === PAGE_CART && renderCart()}
@@ -155,4 +161,4 @@ const Shields = () => {
   );
 };
 
-export default Shields;
+export default ListOfMeals2;

@@ -16,14 +16,9 @@ const Navbar = () => {
           <li>
             <Link to="/carouselweapon">Weapons</Link>
           </li>
-
           <li>
             <Link to="/order">Orders</Link>
           </li>
-
-          {/*           <li>
-            <Link to="/food2">food2</Link>
-          </li> */}
         </ul>
       </nav>
     </div>

@@ -4,36 +4,36 @@ import { Link } from "react-router-dom";
 const slides = [
   {
     path: "/listOfMeals",
-    title: "Hostel",
-    description: "Pig Counter",
+    title: "Pig Counter",
+    description: "Hostel",
     image:
       "https://www.lesrestos.com/img/media/special/festoyez-au-banquet-des-troubadours-1.jpg",
   },
   {
     path: "/listOfMeals",
-    title: "Hostel",
-    description: "To the drunken knight",
+    title: "To the drunken knight",
+    description: "Hostel",
     image:
       "https://fr.web.img6.acsta.net/r_1920_1080/newsv7/16/12/06/12/46/2807590.jpg",
   },
   {
     path: "/listOfMeals",
-    title: "Hostel",
-    description: "The Crazy Crusade",
+    title: "The Crazy Crusade",
+    description: "Hostel",
     image:
       "https://i.pinimg.com/564x/ad/52/e3/ad52e3a1ddfb298356546139159eced0.jpg",
   },
   {
     path: "/listOfMeals",
-    title: "Hostel",
-    description: "The lost mercenary",
+    title: "The lost mercenary",
+    description: "Hostel",
     image:
       "https://www.tripsavvy.com/thmb/8kd8i8KYZ1G26UbdVMXebWRgRyk=/1499x999/filters:fill(auto,1)/MedievalBanquet-56a3e2af3df78cf7727fae5b.jpg",
   },
   {
     path: "/listOfMeals",
-    title: "Hostel",
-    description: "Thirsty camel",
+    title: "Thirsty Camel",
+    description: "Hostel",
     image:
       "https://www.greatdays.co.uk/wp-content/uploads/The-Medieval-Banquet-Ivory-House-St-Katharine-Docks-London-Stag-3-NCN.jpg",
   },
