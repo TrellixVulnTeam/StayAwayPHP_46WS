@@ -8,23 +8,21 @@ const Accueil = () => {
   return (
     <div className='container-home-page'>
       <div>
-      <img className='logo' src='../images/logo.png' alt='logo' />
+        <img className='logo' src='../images/logo.png' alt='logo' />
       </div>
       <img className='gif' src='../images/chevalier.gif' alt='logo' />
       <div className='container-btn-home'>
-        <Link to='/weapon'>
+        <Link to='/carouselweapon'>
           <button type='button' className='btn1 btn'>
             EXPRESS WEAPONS
           </button>
         </Link>
         <Link to='/food'>
-          <button type='button'  className='btn2 btn'>
+          <button type='button' className='btn2 btn'>
             EXPRESS MEALS
           </button>
         </Link>
-        
       </div>
-      
     </div>
   );
 };
