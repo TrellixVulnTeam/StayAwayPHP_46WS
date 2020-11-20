@@ -20,8 +20,6 @@ const Navbar = () => {
                     <li>
                         <Link to="/commandes">Orders</Link>
                     </li>
-                    
-                    
                 </ul>
             </nav>
         </div>

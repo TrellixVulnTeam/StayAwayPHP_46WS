@@ -1,9 +1,10 @@
 import React from 'react';
 import Meals from './Meals';
+import '../style/Meals.css'
 
 const ListOfMeals = () => {
   return (
-    <div>
+    <div className="container-cards">
       <Meals />
       <Meals />
       <Meals />
@@ -13,7 +14,6 @@ const ListOfMeals = () => {
       <Meals />
       <Meals />
       <Meals />
-
       <Meals />
       <Meals />
       <Meals />

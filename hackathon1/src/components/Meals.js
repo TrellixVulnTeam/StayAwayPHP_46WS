@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../style/Meals.css'
 
 const Meals = () => {
   const [meals, setMeals] = useState([]);
@@ -19,14 +20,19 @@ const Meals = () => {
   };
   console.log(meals);
 
+
   return (
-    <div>
+    <div className="container-cards">
       {meals.map((meal) => (
-        <div>
-          <img src={meal.strMealThumb} alt={meal.strIngredient1} />
-          <p>{meal.strMeal}</p>
-          <p>{`${meal.strIngredient1}, ${meal.strIngredient2}, ${meal.strIngredient3}, ${meal.strIngredient4}`}</p>
-          <button type='button'>Add festoylle</button>
+        <div className="container-food">
+          <img className="img-food" src={meal.strMealThumb} alt={meal.strIngredient1} />
+          <div className="paraph-food">
+            <p className="para1">{meal.strMeal}</p>
+            <p className="para2">{`${meal.strIngredient1}, ${meal.strIngredient2}, ${meal.strIngredient3}, ${meal.strIngredient4}`}</p>
+          </div>
+          <p className="para3">{`${meal.idMeal}`}</p>
+          <img className="denier" src="../images/denier.png" alt="denier"/>
+          <button className="btn-food" type="submit">ADD</button>
         </div>
       ))}
     </div>
